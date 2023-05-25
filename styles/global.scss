@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300');
 @layer components {
     .navbar {
-        @apply fixed top-0 h-16 w-screen flex flex-row 
+        @apply fixed top-0 h-24 w-screen flex flex-col 
         justify-center items-center bg-transparent 
-        text-gray-900 dark:text-gray-100 gap-10;
+        text-gray-900 dark:text-gray-100 gap-3;
     }
     .manage-button {
         @apply dark:bg-slate-400 dark:bg-opacity-10 
