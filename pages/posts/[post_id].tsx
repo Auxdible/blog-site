@@ -24,12 +24,10 @@ export default function Post({ post }: { post?: IPost }) {
     );
 }
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-    console.log(context.params);
   if (!context.params) return { props: {} };
   const postId = context.params['post_id'];
   if (postId) {
     const post = await getPost(postId.toString());
-    console.log(post);
     if (post) {
         
         return {

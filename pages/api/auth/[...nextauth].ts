@@ -25,7 +25,6 @@ export default NextAuth({
                         
                     }
                 } catch (x) {
-                    console.log(x);
                     return null;
                 }
             }

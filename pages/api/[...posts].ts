@@ -53,7 +53,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return res.status(200).send(`Successfully deleted ${req.query['post_id']}`)
         }
     } catch (x) {
-        console.log(x);
         return res.status(500).send("There was an error on our end preforming this operation!");
     }
 }

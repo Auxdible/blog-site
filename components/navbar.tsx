@@ -24,7 +24,7 @@ export default function Navbar() {
                 <span className={"text-2xl w-full block font-montserrat group-hover:text-orange-400 transition-all duration-200"}>Logout</span>
             </Link> : status == "loading" ?
             <span className={"group w-full block hover:translate-y-1 transition-all"}>
-                <span className={"text-2xl w-full block font-montserrat group-hover:text-orange-400 transition-all duration-200"}>Logout</span>
+                <span className={"text-2xl w-full block font-montserrat group-hover:text-orange-400 transition-all duration-200"}>Loading</span>
             </span>
             :
             <Link href="/api/auth/signin" className={"group w-full block hover:translate-y-1 transition-all"}>

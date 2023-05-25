@@ -35,7 +35,6 @@ export async function getPost(post_id: string) {
             post_content: converter.makeHtml(post.post_content)
         } : undefined;
     } catch (x) {
-        console.log(x);
         return null;
     }
 }
