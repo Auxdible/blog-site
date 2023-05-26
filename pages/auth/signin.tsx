@@ -11,7 +11,7 @@ export default function SignIn({ csrfToken, error }: InferGetServerSidePropsType
         </div> : <></>}
         <div className={"flex mx-auto flex-col rounded-lg dark:border-orange-300 border-orange-600 border p-2 lg:w-1/2 w-3/4"}>
     <form method="post" action="/api/auth/callback/credentials" className={"flex flex-col justify-center gap-5"}>
-      <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
+      <input name="csrfToken" type="hidden" defaultValue={csrfToken||undefined} />
       <label className={"dark:text-gray-100 light:text-gray-800 font-roboto mx-auto text-xl"}>
         Username: 
         <input className={"sm:ms-4 w-3/4 dark:bg-transparent border border-orange-400 rounded-lg text-lg"} name="username" type="text" />
@@ -31,7 +31,7 @@ export default function SignIn({ csrfToken, error }: InferGetServerSidePropsType
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   return {
     props: {
-      csrfToken: await getCsrfToken(context),
+      csrfToken: await getCsrfToken(context) || null,
       error: context.query['error'] || null
     },
   }
