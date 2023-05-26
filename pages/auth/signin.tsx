@@ -14,11 +14,11 @@ export default function SignIn({ csrfToken, error }: InferGetServerSidePropsType
       <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
       <label className={"dark:text-gray-100 light:text-gray-800 font-roboto mx-auto text-xl"}>
         Username: 
-        <input className={"sm:ms-4 dark:bg-transparent border border-orange-400 rounded-lg text-lg"} name="username" type="text" />
+        <input className={"sm:ms-4 w-3/4 dark:bg-transparent border border-orange-400 rounded-lg text-lg"} name="username" type="text" />
       </label>
       <label className={"dark:text-gray-100 light:text-gray-800 font-roboto mx-auto text-xl"}>
         Password: 
-        <input className={"sm:ms-4 dark:bg-transparent border border-orange-400 rounded-lg text-lg"} name="password" type="password" />
+        <input className={"sm:ms-4 w-3/4 dark:bg-transparent border border-orange-400 rounded-lg text-lg"} name="password" type="password" />
       </label>
       <button className={"d-block mx-auto my-5 w-fit px-3 py-1 dark:bg-transparent border border-orange-400 rounded-lg text-lg transition-colors duration-200 hover:text-orange-400 hover:dark:border-gray-100 hover:border-gray-800 dark:text-gray-100 text-gray-800 font-roboto"} type="submit">Sign in</button>
     </form>
