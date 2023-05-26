@@ -5,7 +5,7 @@ import Head from "next/head";
 
 
 export default function Post({ post }: { post?: IPost }) {
-    return ( <div className={"flex flex-col justify-center gap-10 bg-gray-100 dark:bg-black min-h-screen pb-16"}>
+    return ( <div className={"flex flex-col max-sm:w-fit justify-center gap-10 bg-gray-100 dark:bg-black min-h-screen pb-16"}>
         <Head>
             <title>{post?.post_title || "Not Found"}</title>
         </Head>
