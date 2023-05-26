@@ -12,7 +12,7 @@ export async function getLatestPosts(limit: number|undefined) {
     await connectDB();
     try {
         let posts = await PostModel.find({}, {}, { limit });
-        return posts.map((post) => ({
+        return posts.reverse().map((post) => ({
             post_id: post.post_id,
             posted_by: post.posted_by,
             post_title: post.post_title,
