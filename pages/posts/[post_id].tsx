@@ -1,6 +1,5 @@
 import { getPost } from "@/lib/posts";
 import { IPost } from "@/models/Post";
-import DOMPurify from "dompurify";
 import { GetServerSidePropsContext } from "next";
 import Head from "next/head";
 
@@ -15,7 +14,7 @@ export default function Post({ post }: { post?: IPost }) {
             <h1 className={"d-block text-center text-orange-400 font-montserrat text-4xl my-4"}>{post.post_title}</h1>
             <p className={"d-block text-center dark:text-gray-100 text-gray-900 font-montserrat text-2xl"}>By {post.posted_by} • {new Date(post.post_date_unix).toISOString().split('T')[0]}</p>
         </header>
-        <div className={"markdown w-full mx-auto rounded-lg border dark:border-gray-100 border-gray-800 p-4"} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(post.post_content)}}>
+        <div className={"markdown w-full mx-auto rounded-lg border dark:border-gray-100 border-gray-800 p-4"} dangerouslySetInnerHTML={{__html: post.post_content}}>
         </div>
         </>
             : <h1 className={"text-center text-orange-400 font-montserrat text-4xl my-4"}>Couldn&apos;t find that post.</h1>}
