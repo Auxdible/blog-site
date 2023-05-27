@@ -33,7 +33,7 @@ export async function getPost(post_id: string) {
             posted_by: post.posted_by,
             post_date_unix: post.post_date_unix,
             post_content: converter.makeHtml(post.post_content)
-        } : undefined;
+        } : null;
     } catch (x) {
         return null;
     }

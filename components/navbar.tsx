@@ -8,17 +8,17 @@ export default function Navbar() {
     return (
         <nav className={"navbar"}>
             <ul className={"flex flex-row gap-10 h-10"}>
-                <li className={"flex-1 text-center"}>
+                <li className={"flex-1 text-center w-20"}>
                 <Link href="/" className={"group w-full block hover:translate-y-1 transition-all"}>
                     <span className={"text-2xl w-full block font-montserrat group-hover:text-orange-400 transition-all duration-200"}>Home</span>
                 </Link>
                 </li>
-                <li className={"flex-1 text-center"}>
+                <li className={"flex-1 text-center w-20"}>
                 <Link href="/blog" className={"group w-full block hover:translate-y-1 transition-all"}>
                     <span className={"text-2xl w-full block font-montserrat group-hover:text-orange-400 transition-all duration-200"}>Blog</span>
                 </Link>
                 </li>
-                <li className={"flex-1 text-center"}>
+                <li className={"flex-1 text-center w-20"}>
                 {status == "authenticated" ? 
             <Link href="/" onClick={() => signOut()} className={"group w-full block hover:translate-y-1 transition-all"}>
                 <span className={"text-2xl w-full block font-montserrat group-hover:text-orange-400 transition-all duration-200"}>Logout</span>
